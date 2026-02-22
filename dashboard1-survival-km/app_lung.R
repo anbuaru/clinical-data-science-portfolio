@@ -94,7 +94,7 @@ server <- function(input, output, session) {
     ggsurvplot(
       fit          = km_fit(),
       data         = filtered_data(),
-      conf.int     = input$show_ci,
+      conf.int     = as.logical(input$show_ci),
       risk.table   = input$show_risk,
       pval         = TRUE,
       pval.method  = TRUE,
